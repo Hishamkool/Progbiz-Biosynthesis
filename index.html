@@ -1,29 +1,262 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <meta name="viewport" content="width=device-width, initial-scale:1.0">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<title>
-    Biosynthesis
-</title>
 
 <body>
-    <!-- title navigations login and signup -->
-    <nav class="header">
+
+    <!-- 1. HEADER / NAVBAR -->
+    <header>
+        <nav class="header">
+            <div class="title">
+                <img src="assets/images/svg/biosynthesis.svg" alt="biosynthesis">
+            </div>
+            <!-- Navigation Links: Home, About Us, Reviews, Products, Blog -->
+            <div class="navbar">
+                <ul>
+                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Reviews</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Products</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                </ul>
+            </div>
+            <!-- Login / Sign Up Buttons -->
+            <div class="login-signup">
+                <a href="#" class="login">Login</a>
+                <a href="#" class="signup">Sign up Free</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section class="hero">
+        <!-- Tagline / Badge (e.g., "Top Apps Recognized") -->
+        <div class="round">
+
+            <p>Top Agro Researcher’s</p>
+        </div>
+        <!-- Main Heading: "Cultivating Next-Gen Growth in Agriculture" -->
+        <div class="main-heading">
+            <h1>Cultivating Next-Gen Growth in Agriculture</h1>
+        </div>
+        <!-- Subheading -->
+        <div class="subheading">
+            <p>Empowering farmers with smarter tools, bigger yields, and greener solutions</p>
+        </div>
+        <!-- Call-to-Action Button: Get Started -->
+        <button class="get-started-btn">
+            Get Started ->
+        </button>
+    </section>
+
+    <!-- 3. HERO IMAGE (FULL WIDTH) -->
+    <section class="hero-image">
+        <img src="assets/images/jpg/banner-image.png" alt="textured green agriculture land">
+    </section>
+
+    <!-- 4. ABOUT SECTION -->
+    <section class="about">
+        <div class="hero-image-about">
+            <div class="about-year">
+                <p>2025</p>
+            </div>
+            <div class="about-text">
+                <p>
+                    At <span>BioSynthesis,</span> we’re growing a greener, smarter future for agriculture.
+                    With innovative tools and sustainable solutions, we help farmers boost yields, cut waste,
+                    and protect the planet. Together, we’re cultivating healthier crops, stronger communities,
+                    and a brighter tomorrow.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. FEATURE CAROUSEL / GET STARTED SECTION -->
+    <section class="get-started">
+        <!-- Heading: "Get Started Now" -->
+        <div class="curousel-heading">
+            <h1>Get Started Now</h1>
+            <img src="assets/images/svg/right arow top small.svg" alt="">
+        </div>
+        <!-- Feature cards (Organic Farm, Organic Fertilizer, Technology Irrigation, Agricultural Monitoring) -->
+        <div class="slides">
+            <figure class="farm">
+                <img src="assets/images/jpg/img-one.jpg" alt="Organic Farm">
+                <figcaption>Organic Farm</figcaption>
+            </figure>
+
+            <figure class="fertilizer">
+                <img src="assets/images/jpg/img-two.jpg" alt="Organic Fertilizer">
+                <figcaption>Organic Fertilizer</figcaption>
+            </figure>
+
+            <figure class="irrigation">
+                <img src="assets/images/jpg/img-three.jpg" alt="Technology Irrigation">
+                <figcaption>Technology Irrigation</figcaption>
+            </figure>
+
+            <figure class="monitoring">
+                <img src="assets/images/jpg/img-four.jpg" alt="Agricultural Monitoring">
+                <figcaption>Agricultural Monitoring</figcaption>
+            </figure>
+        </div>
+
+        <!-- Carousel Navigation Arrows -->
+        <div class="curousel-arrows">
+            <a href="#" class="left" title="previous">
+                <img src="assets/images/svg/navigator.svg" alt="left arrow">
+                <img src="assets/images/svg/navigator-right.svg" alt="right arrow">
+            </a>
+
+        </div>
+    </section>
+
+    <!-- 6. SECOND HERO / BANNER -->
+    <section class="banner">
+        <!-- Background image with overlay text: "Transform Your Farm. Empower Your Future." -->
+        <div class="banner2-text" style="background-image: url(assets/images/jpg/img-banner-two.jpg);">
+            <h1>Transform Your Farm. Empower Your Future.</h1>
+            <a href="#"><img src="assets/images/svg/right arow top small.svg" alt=""></a>
+        </div>
+
+
+
+    </section>
+
+    <!-- 7. BLOG / GREEN GROWTH HUB SECTION -->
+    <section class="green-growth">
         <div class="title">
-            <img src="assets/images/svg/biosynthesis.svg" alt="">
+            <!-- Title: "The Green Growth Hub: Innovation & Earthwise" -->
+            <h1>
+                The Green Growth Hub: Innovation & Earthwise
+            </h1>
+            <!-- Intro paragraph -->
+            <p>
+                Insights, tips, and stories from the world of sustainable farming and innovative agriculture — offering
+                expert advice, real-world success stories, and the latest trends to help farmers embrace smarter,
+                eco-friendly practices. From cutting-edge technology to time-tested solutions, we’re here to inspire and
+                guide you on the journey toward a more sustainable, productive future.
+            </p>
+        </div>
+        <!-- Blog Cards: Farming Precision, Crop Surveillance, Automated Farming -->
+        <div class="green-growth-cards">
+            <figure>
+                <img src="assets/images/jpg/img-five.jpg" alt="Farming Precision">
+                <figcaption>
+                    <strong>Farming Precision</strong>
+                    <p>Optimize your fields, reduce waste, and boost yields with smart, precise farming solutions.</p>
+                    <a href="#">Read more &rarr; </a>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/jpg/img-six.jpg" alt="Crop Surveillance">
+                <figcaption>
+                    <strong>Crop Surveillance</strong>
+                    <p>Monitor crop health in real-time with smart tools that detect issues early and protect your
+                        yield.</p>
+                    <a href="#">Read more &rarr; </a>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="assets/images/jpg/img-seven.jpg" alt="Automated Farming">
+                <figcaption>
+                    <strong>Automated Farming</strong>
+                    <p>Streamline your farm operations with smart automation for faster, easier, and more efficient
+                        growth.</p>
+                    <a href="#">Read more &rarr; </a>
+                </figcaption>
+            </figure>
 
         </div>
-        <div class="navigationbar">
 
+    </section>
+
+    <!-- 8. CONTACT SECTION -->
+    <section class="contact">
+        <!-- Left: Contact Form (First Name, Last Name, Email, Message, Send Button) -->
+        <form action="#" class="contact-form">
+            <h2>We’d love to help</h2>
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first-name" placeholder="Your name" required>
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last-name" placeholder="Your last name">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="example@gmail.com">
+            <label for="message">Message</label>
+            <input type="text" name="message" id="message">
+            <button type="submit"><img src="assets/images/svg/send black.svg" alt="send button"></button>
+        </form>
+        <!-- Right or below: Contact Image (forest scene) -->
+        <img src="assets/images/jpg/contact-img.jpg" alt="enchanted forest waterfall">
+    </section>
+
+    <!-- 9. FOOTER -->
+    <footer>
+        <!-- Logo + Short description -->
+        <figure class="logo-description">
+            <img src="assets/images/svg/logo plus image.svg" alt="">
+            <figcaption>
+                Monitor crop health in real-time with smart tools that detect issues early and protect your yield.
+                <!-- Social Media Icons -->
+                <div class="social">
+                    <img src="assets/images/svg/instagram.svg" alt="instagram logo">
+                    <img src="assets/images/svg/twitter.svg" alt="twitter logo">
+                    <img src="assets/images/svg/linkedin.svg" alt="linkedin logo">
+                    <img src="assets/images/svg/facebook.svg" alt="facebook logo">
+
+            </figcaption>
+        </figure>
+        <!-- Footer Navigation Columns: Company, Resource, Career, Help -->
+
+        <div class="footer-navigations">
+            <div class="company">
+                <h5>Company</h6>
+                    <a href="#">Features</a>
+                    <a href="#">pricing</a>
+                    <a href="#">About us</a>
+                    <a href="#">product</a>
+                    <a href="#">contact</a>
+            </div>
+            <div class="resource">
+                <h5>resource</h6>
+                    <a href="#">Features</a>
+                    <a href="#">pricing</a>
+                    <a href="#">About us</a>
+                    <a href="#">product</a>
+                    <a href="#">contact</a>
+            </div>
+            <div class="career">
+                <h5>career</h6>
+
+                    <a href="#">Features</a>
+                    <a href="#">pricing</a>
+                    <a href="#">About us</a>
+                    <a href="#">product</a>
+                    <a href="#">contact</a>
+            </div>
+            <div class="help">
+                <h5>help</h6>
+
+                    <a href="#">Features</a>
+                    <a href="#">pricing</a>
+                    <a href="#">About us</a>
+                    <a href="#">product</a>
+                    <a href="#">contact</a>
+            </div>
         </div>
-        <div class="login-signup"></div>
-    </nav>
-
-
+        <!-- bottom text -->
+        <div class="reep-to-grow">
+            <P>REEP TO GROW</P>
+        </div>
+    </footer>
 
 </body>
 
