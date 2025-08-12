@@ -1,65 +1,118 @@
 * {
     outline: 2px dotted grey;
-    font-family: 'Open Sans', sans-serif;
+}
+
+/* variables */
+:root {
+    /* colors */
+    --primary-colour: #3F7D58;
+    --secondary-colour: #262A2D;
+    --grey-colour-200: #F2F2F2;
+    --font-colour-400: #121212;
+    --font-colour-800: #636363;
+
+    /* fonts */
+    --font-body: font-family: 'Open Sans', sans-serif;
+    --font-heading: font-family: 'Montserrat', sans-serif;
+
+    /* Mobile-first font sizes */
+    --font-size-h1: 36px;
+    --font-size-h2: 28px;
+    --font-size-h3: 22px;
+    --font-size-h4: 18px;
+    --font-size-body: 14px;
+    --font-size-cta: 12px;
+
+}
+
+/* base styles */
+body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    color: var(--font-colour-400);
+    background-color: var(--grey-colour-200);
     margin: 0;
     padding: 0;
+
 }
 
-.header {
-    /* outline: 1px solid green; */
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 20px;
-    padding-top: 40px;
+/* headings */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    margin: 0;
+
 }
 
-
-
-/* nav bar */
-
-
-.navbar ul {
-    border-radius: 24px;
-    padding: 8px 20px;
-    background-color: #262A2D;
-    display: flex;
-    gap: 26px;
-    list-style-type: none;
+h1 {
+    font-size: var(--font-size-h1);
 }
 
-.nav-item a {
+h2 {
+    font-size: var(--font-size-h2);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+}
+
+/* cta button style */ 
+/* .btn-cta {
+    font-size: var(--font-size-cta);
+    font-weight: var(--font-weight-800);
+    background-color: var(--color-primary);
     color: white;
-    text-decoration: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.login-signup .login,
-.signup {
-
-    text-decoration: none;
-    color: black;
-    padding: 10px;
-    margin: 0 10px;
+.btn-cta:hover {
+    background-color: var(--color-secondary);
+} */
 
 
+
+/* reset default styles */
+li {
+    text-decoration-style: none;
+    list-style: none;
 }
 
-.login-signup .signup {
-    border: 1px solid black;
-    border-radius: 20px;
-
-
-}
-
-/* //navbar */
 
 
 /* samll tab styles */
 @media screen and (min-width:620px) {}
 
 /*  tab styles */
-@media screen and (min-width:960px) {}
+@media screen and (min-width:960px) {
+    :root {
+        --font-size-h1: 56px;
+        --font-size-h2: 42px;
+        --font-size-h3: 32px;
+        --font-size-h4: 24px;
+        --font-size-body: 16px;
+        --font-size-cta: 14px;
+    }
+}
 
 /* desktop tab styles */
-@media screen and (min-width:1200x) {}
+@media screen and (min-width:1200x) {
+    :root {
+        /* default font sizes - desktop   */
+
+        --font-size-h1: 74px;
+        --font-size-h2: 56px;
+        --font-size-h3: 42px;
+        --font-size-h4: 32px;
+        --font-size-body: 20px;
+        --font-size-cta: 16px;
+    }
+}
