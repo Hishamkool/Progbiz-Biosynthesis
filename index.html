@@ -2,9 +2,13 @@
 <html lang="en">
 
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="viewport" content="width=device-width, initial-scale:1.0">
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -19,22 +23,23 @@
             </div>
             <!-- Navigation Links: Home, About Us, Reviews, Products, Blog -->
             <div class="navbar">
-                <ul>
-                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Reviews</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Products</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+                <button class="hamburger" onclick="toggleNavBar()">&#9776;</button>
+                <ul id="nav-items">
+                    <li class="nav-links"><a href="#" class="nav-link">Home</a></li>
+                    <li class="nav-links"><a href="#" class="nav-link">About Us</a></li>
+                    <li class="nav-links"><a href="#" class="nav-link">Reviews</a></li>
+                    <li class="nav-links"><a href="#" class="nav-link">Products</a></li>
+                    <li class="nav-links"><a href="#" class="nav-link">Blog</a></li>
+                    <div class="login-signup">
+                        <a href="#" class="login">Login</a>
+                        <a href="#" class="signup">Sign up Free</a>
+                    </div>
                 </ul>
+                <!-- Login / Sign Up Buttons -->
+
             </div>
-            <!-- Login / Sign Up Buttons -->
-            <div class="login-signup">
-                <a href="#" class="login">Login</a>
-                <a href="#" class="signup">Sign up Free</a>
-            </div>
-            <div >
-                <button class="btn-cta">abc</button>
-            </div>
+
+
         </nav>
     </header>
 
@@ -42,7 +47,7 @@
     <section class="hero">
         <!-- Tagline / Badge (e.g., "Top Apps Recognized") -->
         <div class="round">
-
+            <div class="circle"></div>
             <p>Top Agro Researcher’s</p>
         </div>
         <!-- Main Heading: "Cultivating Next-Gen Growth in Agriculture" -->
@@ -55,7 +60,8 @@
         </div>
         <!-- Call-to-Action Button: Get Started -->
         <button class="get-started-btn">
-            Get Started ->
+            Get Started
+            <img src="assets/images/svg/simple right arrow.svg">
         </button>
     </section>
 
@@ -84,54 +90,59 @@
 
     <!-- 5. FEATURE CAROUSEL / GET STARTED SECTION -->
     <section class="get-started">
-        <!-- Heading: "Get Started Now" -->
-        <div class="curousel-heading">
-            <h2>Get Started Now</h2>
-            <img src="assets/images/svg/right arow top small.svg" alt="">
-        </div>
+
         <!-- Feature cards (Organic Farm, Organic Fertilizer, Technology Irrigation, Agricultural Monitoring) -->
         <div class="slides">
-            <figure class="farm">
-                <img src="assets/images/jpg/img-one.jpg" alt="Organic Farm">
-                <figcaption>
+            <div class="first-slide">
+                <figure class="farm">
+                    <img src="assets/images/jpg/img-one.jpg" alt="Organic Farm">
+                    <figcaption>
+                        Organic Farm
+                    </figcaption>
+                </figure>
+                <!-- Carousel Navigation Arrows -->
+                <div class="slide-navigations">
+                    <a href="#" class="left" title="previous">
+                        <img src="assets/images/svg/navigator.svg" alt="left arrow">
+                        <img src="assets/images/svg/navigator-right.svg" alt="right arrow">
+                    </a>
 
-                    Organic Farm
-                </figcaption>
-            </figure>
+                </div>
+            </div>
+            <!-- Heading: "Get Started Now + image" -->
+            <div class="second-slide">
+                <div class="get-started-heading">
+                    <h4>Get <br> Started Now</h4>
+                    <img class="navigation" src="assets/images/svg/right arow top small.svg" alt="right arrow small">
+                </div>
+                    <figure class="fertilizer">
+                        <img src="assets/images/jpg/img-two.jpg" alt="Organic Fertilizer">
+                        <figcaption>
+                            Organic Fertilizer
+                        </figcaption>
+                    </figure>
+            </div>
 
-            <figure class="fertilizer">
-                <img src="assets/images/jpg/img-two.jpg" alt="Organic Fertilizer">
-                <figcaption>
+            <div class="third-slide">
+                <figure class="Irrigation">
+                    <img src="assets/images/jpg/img-three.jpg" alt="Technology Irrigation">
+                    <figcaption>
+                        Technology Irrigation
+                    </figcaption>
+                </figure>
+            </div>
 
-                    Organic Fertilizer
-                </figcaption>
-            </figure>
-
-            <figure class="irrigation">
-                <img src="assets/images/jpg/img-three.jpg" alt="Technology Irrigation">
-                <figcaption>
-
-                    Technology Irrigation
-                </figcaption>
-            </figure>
-
-            <figure class="monitoring">
-                <img src="assets/images/jpg/img-four.jpg" alt="Agricultural Monitoring">
-                <figcaption>
-
-                    Agricultural Monitoring
-                </figcaption>
-            </figure>
+            <div class="fourth-slide">
+                <figure class="Monitoring">
+                    <img src="assets/images/jpg/img-four.jpg" alt="Agricultural Monitoring">
+                    <figcaption>
+                        Agricultural Monitoring
+                    </figcaption>
+                </figure>
+            </div>
         </div>
 
-        <!-- Carousel Navigation Arrows -->
-        <div class="curousel-arrows">
-            <a href="#" class="left" title="previous">
-                <img src="assets/images/svg/navigator.svg" alt="left arrow">
-                <img src="assets/images/svg/navigator-right.svg" alt="right arrow">
-            </a>
 
-        </div>
     </section>
 
     <!-- 6. SECOND HERO / BANNER -->
@@ -282,7 +293,7 @@
             <P>REEP TO GROW</P>
         </div>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 
 </html>
