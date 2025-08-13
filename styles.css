@@ -1,5 +1,6 @@
 * {
-    outline: 2px dotted grey;
+    /* outline: 2px dotted grey; */
+
 }
 
 /* variables */
@@ -12,24 +13,28 @@
     --font-colour-800: #636363;
 
     /* fonts */
-    --font-body: font-family: 'Open Sans', sans-serif;
-    --font-heading: font-family: 'Montserrat', sans-serif;
-    --font-title: font-family: 'Sansation', sans-serif;
+    --font-body-open_sans: 'Open Sans', sans-serif;
+    --font-heading-montserrat: 'Montserrat', sans-serif;
+    --font-title-sansation: 'Sansation', sans-serif;
 
     /* Mobile-first font sizes */
-    --font-size-h1: 36px;
-    --font-size-h2: 28px;
-    --font-size-h3: 22px;
-    --font-size-h4: 18px;
-    --font-size-body: 14px;
-    --font-size-cta: 12px;
+    --font-size-h1-74: 36px;
+    --font-size-h2-56: 28px;
+    --font-size-h3-42: 22px;
+    --font-size-h4-32: 18px;
+    --font-size-body-20: 14px;
+    --font-size-cta-16: 12px;
+
+
 
 }
 
+
+
 /* base styles */
 body {
-    font-family: var(--font-body);
-    font-size: var(--font-size-body);
+    font-family: var(--font-body-open_sans);
+    font-size: var(--font-size-body-20);
     color: var(--font-colour-400);
     background-color: #FFFFFF;
     margin: 0;
@@ -45,25 +50,25 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: var(--font-heading);
+    font-family: var(--font-heading-montserrat);
     margin: 0;
 
 }
 
 h1 {
-    font-size: var(--font-size-h1);
+    font-size: var(--font-size-h1-74);
 }
 
 h2 {
-    font-size: var(--font-size-h2);
+    font-size: var(--font-size-h2-56);
 }
 
 h3 {
-    font-size: var(--font-size-h3);
+    font-size: var(--font-size-h3-42);
 }
 
 h4 {
-    font-size: var(--font-size-h4);
+    font-size: var(--font-size-h4-32);
 }
 
 
@@ -74,9 +79,9 @@ h4 {
 
 p {
     margin: 0;
-    font-size: var(--font-size-body);
+    font-size: var(--font-size-body-20);
     color: var(--font-colour-800);
-    font-family: 'Open Sans';
+    font-family: var(--font-body-open_sans);
 }
 
 li {
@@ -246,7 +251,7 @@ nav {
 /* image captions */
 .slides figcaption {
     text-align: right;
-    font-size: var(--font-size-body);
+    font-size: var(--font-size-body-20);
     color: var(--font-colour-800);
     font-family: 'Open Sans';
 
@@ -259,8 +264,8 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: var(--font-size-h4);
-    font-family: var(--font-title);
+    font-size: var(--font-size-h4-32);
+    font-family: var(--font-title-sansation);
 }
 
 /* arrow size */
@@ -312,7 +317,7 @@ figure {
 
 /* background image */
 .banner .banner-image {
-  
+
     max-height: 500px;
     width: 100%;
     object-fit: cover;
@@ -320,31 +325,120 @@ figure {
 
 /* text style */
 .banner h2 {
-    font-size: var(--font-size-h2);
+    font-size: var(--font-size-h2-56);
     color: white;
     font-weight: 400;
-    font-family: var(--font-title);
+    font-family: var(--font-title-sansation);
 }
 
 /* text */
 .banner .banner-text {
     position: absolute;
-    top: 50px;
-    left: 50px;
+    top: 15%;
+    left: 5%;
 }
 
-/* arrow position */ 
+/* arrow position */
 .banner img.arrow {
     position: absolute;
     right: 30px;
     bottom: 5px;
 }
 
+/* 7. Green growth hub section */
+.green-growth {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.green-growth .top {
+    padding: 16px 25px;
+}
+
+.green-growth .top .title {
+    padding: 30px 60px;
+
+}
+
+.green-growth-cards {
+    width: 100%;
+}
+
+.green-growth-cards figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
 
 
 
 
+/* 8. Contact section */
+.contact .contact-form {
 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: var(--grey-colour-200);
+}
+
+.contact .contact-form h2 {
+    font-family: var(--font-title-sansation);
+    font-size: var(--font-size-h3-42);
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.contact .contact-form p {
+    padding-bottom: 20px;
+    text-align: center;
+
+}
+
+.label-style-p { 
+    font-size: var(--font-size-body-20);
+    color: var(--font-colour-800);
+    font-family: var(--font-body-open_sans);
+    padding-bottom: 5px;
+}
+
+.contact-form input {
+    border-radius: 20px;
+    border: 1px solid #9C9C9C;
+    padding: 8px 18px;
+    margin-bottom: 10px;
+}
+
+.contact-form #message {
+    height: 120px;
+
+}
+
+.contact-form #submit img {
+    width: 100%;
+}
+
+
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    /* default: image first, form second */
+}
+
+.contact-form {
+    order: 2;
+}
+
+.form-image {
+    order: 1;
+}
+
+/* 9. footer section */
 
 /* MEDIAQUERRY */
 /* samll tab styles */
@@ -353,12 +447,12 @@ figure {
 /*  tab styles */
 @media screen and (min-width:960px) {
     :root {
-        --font-size-h1: 56px;
-        --font-size-h2: 42px;
-        --font-size-h3: 32px;
-        --font-size-h4: 24px;
-        --font-size-body: 16px;
-        --font-size-cta: 14px;
+        --font-size-h1-74: 56px;
+        --font-size-h2-56: 42px;
+        --font-size-h3-42: 32px;
+        --font-size-h4-32: 24px;
+        --font-size-body-20: 16px;
+        --font-size-cta-16: 14px;
     }
 }
 
@@ -367,11 +461,24 @@ figure {
     :root {
         /* default font sizes - desktop   */
 
-        --font-size-h1: 74px;
-        --font-size-h2: 56px;
-        --font-size-h3: 42px;
-        --font-size-h4: 32px;
-        --font-size-body: 20px;
-        --font-size-cta: 16px;
+        --font-size-h1-74: 74px;
+        --font-size-h2-56: 56px;
+        --font-size-h3-42: 42px;
+        --font-size-h4-32: 32px;
+        --font-size-body-20: 20px;
+        --font-size-cta-16: 16px;
+    }
+
+    .contact {
+        flex-direction: row;
+        /* side-by-side */
+    }
+
+    .contact-form {
+        order: 1;
+    }
+
+    .form-image {
+        order: 2;
     }
 }
