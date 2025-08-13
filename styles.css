@@ -39,7 +39,7 @@ body {
     font-size: var(--font-size-body-20);
     color: var(--font-colour-400);
     background-color: #FFFFFF;
-    margin:  0;
+    margin: 0;
     padding: 0;
     /* overflow-x: hidden; */
     overflow-y: auto;
@@ -91,11 +91,17 @@ li {
 
 }
 
-li a {
-
+a {
+    color: #3F7D58;
+    font-family: var(--font-body-open_sans);
     text-decoration: none;
+    font-weight: 600;
 }
 
+header{
+    padding: 20px 10px;
+    
+}
 nav {
     width: 100%;
     display: flex;
@@ -104,8 +110,10 @@ nav {
 
 
 .navbar {
-    display: inline;
-
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    
 
 
 }
@@ -119,8 +127,25 @@ nav {
 #nav-items {
     display: none;
     flex-direction: column;
+    position: absolute;
+    background-color: white;
+    top: 20px;
+    width: 40%;
+    height:  fit-content;
+    cursor: pointer;
     padding: 0 10px;
-    margin: 0;
+    margin: 10px;
+}
+#nav-items   a{
+    display: block;
+    padding: 10px 0;
+}
+#nav-items a:hover{
+    background-color: var(--font-colour-400);
+    
+}
+#nav-items  a:hover{
+    color: white;
 }
 
 /* toggle button for handburger menu */
@@ -137,6 +162,11 @@ nav {
     width: 100%;
     flex-direction: column;
     gap: 10px;
+}
+
+.hamburger {
+    width: 25px;
+    z-index: 1;
 }
 
 
