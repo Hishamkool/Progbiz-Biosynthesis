@@ -252,7 +252,7 @@ nav {
 
 }
 
- 
+
 
 /* second slide */
 .second-slide .get-started-heading {
@@ -303,7 +303,42 @@ figure {
     top: 40px;
 }
 
-/* 6. */
+/* 6.SECOND HERO / BANNER */
+
+
+.banner {
+    position: relative;
+}
+
+/* background image */
+.banner .banner-image {
+  
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* text style */
+.banner h2 {
+    font-size: var(--font-size-h2);
+    color: white;
+    font-weight: 400;
+    font-family: var(--font-title);
+}
+
+/* text */
+.banner .banner-text {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+/* arrow position */ 
+.banner img.arrow {
+    position: absolute;
+    right: 30px;
+    bottom: 5px;
+}
 
 
 
