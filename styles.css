@@ -8,6 +8,8 @@
     /* colors */
     --primary-colour: #3F7D58;
     --secondary-colour: #262A2D;
+    --footer-color: #121212;
+    --footer-subtitle-color: #A3A3A3;
     --grey-colour-200: #F2F2F2;
     --font-colour-400: #121212;
     --font-colour-800: #636363;
@@ -37,7 +39,7 @@ body {
     font-size: var(--font-size-body-20);
     color: var(--font-colour-400);
     background-color: #FFFFFF;
-    margin: 0;
+    margin:  0;
     padding: 0;
     /* overflow-x: hidden; */
     overflow-y: auto;
@@ -85,8 +87,13 @@ p {
 }
 
 li {
-    text-decoration-style: none;
     list-style: none;
+
+}
+
+li a {
+
+    text-decoration: none;
 }
 
 nav {
@@ -399,7 +406,7 @@ figure {
 
 }
 
-.label-style-p { 
+.label-style-p {
     font-size: var(--font-size-body-20);
     color: var(--font-colour-800);
     font-family: var(--font-body-open_sans);
@@ -439,6 +446,73 @@ figure {
 }
 
 /* 9. footer section */
+footer {
+    background-color: var(--footer-color);
+}
+
+footer .footer-navigations {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer .footer-navigations ul {
+    padding-left: 0;
+    padding-right: 20px;
+}
+
+footer .footer-navigations ul li a {
+    color: var(--footer-subtitle-color);
+    display: inline-block;
+    padding-bottom: 10px;
+    border-style: box-border;
+    text-decoration: none;
+}
+
+/* title for each navigation group like company resource etc */
+footer .footer-navigations .footer-topics {
+    color: white;
+}
+
+/* socil icons */
+footer figcaption .social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* company description below logo */
+footer figcaption p {
+    color: var(--footer-subtitle-color);
+    margin-bottom: 40px;
+}
+
+/* 10. bootom text  */
+.reep-to-grow {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    align-items: start;
+    white-space: nowrap;
+    height: 35px;
+
+}
+
+.reep-to-grow p {
+
+
+    margin: 0;
+    font-family: var(--font-title-sansation);
+    font-weight: 700;
+    font-size: 55px;
+    line-height: 1;
+    text-overflow: clip;
+}
+
 
 /* MEDIAQUERRY */
 /* samll tab styles */
