@@ -14,6 +14,7 @@
     /* fonts */
     --font-body: font-family: 'Open Sans', sans-serif;
     --font-heading: font-family: 'Montserrat', sans-serif;
+    --font-title: font-family: 'Sansation', sans-serif;
 
     /* Mobile-first font sizes */
     --font-size-h1: 36px;
@@ -208,7 +209,7 @@ nav {
 }
 
 .hero-image-about {
-    padding: 10px 30px;
+    padding: 20px 30px;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -225,6 +226,16 @@ nav {
 }
 
 /* 5. Get Started Section */
+.get-started {
+    position: relative;
+}
+
+.get-started .slide-navigations {
+    position: absolute;
+    left: 80px;
+    bottom: 0;
+    z-index: 1;
+}
 
 /* navigations arrow size */
 .slide-navigations img {
@@ -232,72 +243,73 @@ nav {
     height: 30px;
 }
 
+/* image captions */
+.slides figcaption {
+    text-align: right;
+    font-size: var(--font-size-body);
+    color: var(--font-colour-800);
+    font-family: 'Open Sans';
+
+}
+
+ 
+
+/* second slide */
+.second-slide .get-started-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: var(--font-size-h4);
+    font-family: var(--font-title);
+}
+
 /* arrow size */
 .second-slide .get-started-heading .navigation {
+
     width: 30px;
     height: 30px;
 }
-.second-slide .get-started-heading{
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-} 
-.second-slide .fertilizer img{
+
+.second-slide .fertilizer img {
     width: 150px;
 }
-.slides{
-    display: flex;
-    flex-direction: row;
 
-
-}
-
-/* .curousel-heading {
-    position: absolute;
-    left: 22%;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    width: 150px;
-    justify-content: space-between;
-    align-items: center;
-
-} */
-
-
-
-/* .slides {
-    display: flex;
-    flex-direction: row;
-    height: 700px;
-    background-color: #262A2D;
+.slides {
     position: relative;
+    display: flex;
+    overflow-x: auto;
+    margin-left: -60px;
+    overflow-y: hidden;
+    flex-direction: row;
+}
 
-
-} */
-
-/* .get-started .slides figure {
-    position: absolute;
-    padding: 0;
-    margin: 10px;
-    color: var(--font-colour-800);
-    text-align: right;
-} */
+figure {
+    padding: 10px;
+    margin: 0;
+}
 
 .get-started .slides figure img {
 
     border-radius: 20px;
     height: 300px;
+    min-width: 200px;
     max-width: 200px;
     object-fit: cover;
-} 
+}
 
 
-
-/* .get-started .slides:nth-child(0) figure img{
+.fourth-slide figure {
     position: absolute;
-    top: 300px;
-} */
+    top: 40px;
+}
+
+/* 6. */
+
+
+
+
+
+
 
 /* MEDIAQUERRY */
 /* samll tab styles */
