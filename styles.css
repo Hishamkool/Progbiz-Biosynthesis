@@ -3,7 +3,7 @@
 
 }
 
-/* variables */
+/* global variables */
 :root {
     /* colors */
     --primary-colour: #3F7D58;
@@ -92,16 +92,15 @@ li {
 }
 
 a {
-    color: #3F7D58;
-    font-family: var(--font-body-open_sans);
+
     text-decoration: none;
-    font-weight: 600;
 }
 
-header{
+header {
     padding: 20px 10px;
-    
+
 }
+
 nav {
     width: 100%;
     display: flex;
@@ -113,7 +112,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: end;
-    
+
 
 
 }
@@ -131,20 +130,26 @@ nav {
     background-color: white;
     top: 20px;
     width: 40%;
-    height:  fit-content;
+    height: fit-content;
     cursor: pointer;
     padding: 0 10px;
     margin: 10px;
 }
-#nav-items   a{
+
+#nav-items a {
     display: block;
     padding: 10px 0;
+    color: #3F7D58;
+    font-family: var(--font-body-open_sans);
+    font-weight: 600;
 }
-#nav-items a:hover{
+
+#nav-items a:hover {
     background-color: var(--font-colour-400);
-    
+
 }
-#nav-items  a:hover{
+
+#nav-items a:hover {
     color: white;
 }
 
@@ -456,7 +461,14 @@ figure {
 }
 
 .contact-form #submit img {
+
+
     width: 100%;
+}
+
+.contact-form #submit {
+    border: none;
+
 }
 
 
@@ -483,9 +495,11 @@ footer {
 footer .footer-navigations {
     display: flex;
     flex-wrap: wrap;
+    
     padding: 50px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    text-align: start;
 
 }
 
@@ -542,6 +556,8 @@ footer figcaption p {
     line-height: 1;
     text-overflow: clip;
 }
+
+/* done */
 
 
 /* MEDIAQUERRY */
