@@ -393,7 +393,11 @@ figure {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /*    display: grid;
     text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px; */
+
 }
 
 .green-growth .top {
@@ -407,11 +411,11 @@ figure {
 
 .green-growth-cards {
     width: 100%;
+
 }
 
 .green-growth-cards figure img {
     width: 100%;
-    height: auto;
     border-radius: 20px;
 }
 
@@ -419,8 +423,9 @@ figure {
 
 
 /* 8. Contact section */
-.contact .contact-form {
 
+
+.contact .contact-form {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -428,6 +433,7 @@ figure {
     background-color: var(--grey-colour-200);
 }
 
+/* heading style */
 .contact .contact-form h2 {
     font-family: var(--font-title-sansation);
     font-size: var(--font-size-h3-42);
@@ -441,6 +447,7 @@ figure {
 
 }
 
+/* label styling */
 .label-style-p {
     font-size: var(--font-size-body-20);
     color: var(--font-colour-800);
@@ -448,6 +455,7 @@ figure {
     padding-bottom: 5px;
 }
 
+/* input styling */
 .contact-form input {
     border-radius: 20px;
     border: 1px solid #9C9C9C;
@@ -455,14 +463,14 @@ figure {
     margin-bottom: 10px;
 }
 
+/* message box styling */
 .contact-form #message {
     height: 120px;
 
 }
 
+/* prevent overflow of submit button-image */
 .contact-form #submit img {
-
-
     width: 100%;
 }
 
@@ -472,7 +480,7 @@ figure {
 }
 
 
-
+/* for changing the order of the image and form  */
 .contact {
     display: flex;
     flex-direction: column;
@@ -495,7 +503,7 @@ footer {
 footer .footer-navigations {
     display: flex;
     flex-wrap: wrap;
-    
+
     padding: 50px;
     align-items: center;
     justify-content: space-between;
@@ -561,11 +569,8 @@ footer figcaption p {
 
 
 /* MEDIAQUERRY */
-/* samll tab styles */
-@media screen and (min-width:620px) {}
-
-/*  tab styles */
-@media screen and (min-width:960px) {
+/* tab styles */
+@media screen and (min-width:760px) {
     :root {
         --font-size-h1-74: 56px;
         --font-size-h2-56: 42px;
@@ -574,7 +579,67 @@ footer figcaption p {
         --font-size-body-20: 16px;
         --font-size-cta-16: 14px;
     }
+
+
+    /* 7. Green growth hub section */
+    .green-growth-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+        gap: 0 20px;
+        /* row-gap 0, column-gap 20px */
+
+    }
+
+    .green-growth-cards> :nth-child(2) {
+        grid-column: span 2;
+        order: 1;
+    }
+
+    .green-growth-cards> :nth-child(1),
+    .green-growth-cards> :nth-child(3) {
+        order: 2;
+        grid-column: span 1;
+    }
+
+    .green-growth-cards figure img {
+        height: 300px;
+        object-fit: cover;
+    }
+
+
+
+    /* 8. Contact section */
+    
+    .contact {
+        display: flex;
+        flex-direction: row;
+        margin: 50px;  
+        border-radius: 50px;
+
+    }
+     
+
+    /* changing back to default order */
+    .contact-form {
+        order: 1;
+        flex: 1 1 50%;
+    }
+
+    .form-image {
+        order: 2;
+        flex: 1 1 50%;
+        max-width: 50%;
+        object-fit: cover;
+    }
+
+
+
+
 }
+
+/*  tab styles */
+@media screen and (min-width:960px) {}
 
 /* desktop tab styles */
 @media screen and (min-width:1200px) {
@@ -588,6 +653,8 @@ footer figcaption p {
         --font-size-body-20: 20px;
         --font-size-cta-16: 16px;
     }
+
+
 
     .contact {
         flex-direction: row;
