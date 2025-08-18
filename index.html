@@ -17,15 +17,19 @@
 
     <!-- 1. HEADER / NAVBAR -->
     <header>
-        <nav class="header">
+        <nav class="nav-header">
+
+
+            <!-- title image of the website -->
             <div class="title">
                 <img src="assets/images/svg/biosynthesis.svg" alt="biosynthesis">
             </div>
-            <!-- Navigation Links: Home, About Us, Reviews, Products, Blog -->
+
+
+            <!-- nav bar with handburger menu and items -->
             <div class="navbar">
                 <img class="hamburger" src="assets/images/svg/burger-menu-left-svgrepo-com.svg"
                     onclick="toggleNavBar()"><!-- &#9776; -->
-
                 </img>
                 <ul id="nav-items">
                     <li class="nav-links"><a href="#" class="nav-link">Home</a></li>
@@ -33,16 +37,17 @@
                     <li class="nav-links"><a href="#" class="nav-link">Reviews</a></li>
                     <li class="nav-links"><a href="#" class="nav-link">Products</a></li>
                     <li class="nav-links"><a href="#" class="nav-link">Blog</a></li>
-                    <div class="login-signup">
-                        <a href="#" class="login">Login</a>
-                        <a href="#" class="signup">Sign up Free</a>
-                    </div>
-                </ul>
-                <!-- Login / Sign Up Buttons -->
-
+                    <li class="nav-links"><a href="#" class="login">Login</a></li>
+                    <li class="nav-links"><a href="#" class="signup">Sign up Free</a></li> 
+                </ul>  
             </div>
 
-
+            <!-- Login / Sign Up Buttons -->
+            <div class="login-signup">
+                <a href="#" class="login">Login</a>
+                <a href="#" class="signup">Sign up Free</a>
+            </div>
+        
         </nav>
     </header>
 
@@ -230,64 +235,62 @@
     <!-- 9. FOOTER -->
     <footer>
         <!-- Logo + Short description -->
-        <figure class="logo-description">
-            <img src="assets/images/svg/logo plus image.svg" alt="">
-            <figcaption>
-                <p>Monitor crop health in real-time with smart tools that detect issues early and protect your yield.
-                </p>
-                <!-- Social Media Icons -->
-                <div class="social">
-                    <img src="assets/images/svg/instagram.svg" alt="instagram logo">
-                    <img src="assets/images/svg/twitter.svg" alt="twitter logo">
-                    <img src="assets/images/svg/linkedin.svg" alt="linkedin logo">
-                    <img src="assets/images/svg/facebook.svg" alt="facebook logo">
+        <div class="footer-section">
+            <figure class="logo-description">
+                <img src="assets/images/svg/logo plus image.svg" alt="">
+                <figcaption>
+                    <p>Monitor crop health in real-time with smart tools that detect issues early and protect your
+                        yield.
+                    </p>
+                    <!-- Social Media Icons -->
+                    <div class="social">
+                        <img src="assets/images/svg/instagram.svg" alt="instagram logo">
+                        <img src="assets/images/svg/twitter.svg" alt="twitter logo">
+                        <img src="assets/images/svg/linkedin.svg" alt="linkedin logo">
+                        <img src="assets/images/svg/facebook.svg" alt="facebook logo">
+                </figcaption>
+            </figure>
+            <!-- Footer Navigation Columns: Company, Resource, Career, Help -->
+            <div class="footer-navigations">
+                <div class="footer-topics">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-topics">
+                    <h5>Resource</h5>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Customer Stories</a></li>
+                        <li><a href="#">Info</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Payments</a></li>
+                    </ul>
+                </div>
+                <div class="footer-topics">
+                    <h5>Career</h5>
+                    <ul>
+                        <li><a href="#">Jobs</a></li>
+                        <li><a href="#">Hiring</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="#">Tips & Tricks</a></li>
+                    </ul>
+                </div>
 
-            </figcaption>
-        </figure>
-        <!-- Footer Navigation Columns: Company, Resource, Career, Help -->
-
-        <div class="footer-navigations">
-            <div class="footer-topics">
-                <h5>Company</h5>
-                <ul>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#">Contact</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-topics">
-                <h5>Resource</h5>
-                <ul>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Customer Stories</a></li>
-                    <li><a href="#">Info</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Payments</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-topics">
-                <h5>Career</h5>
-                <ul>
-                    <li><a href="#">Jobs</a></li>
-                    <li><a href="#">Hiring</a></li>
-                    <li><a href="#">News</a></li>
-                    <li><a href="#">Product</a></li>
-                    <li><a href="#">Tips & Tricks</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-topics">
-                <h5>Help</h5>
-                <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Support</a></li>
-
-                </ul>
+                <div class="footer-topics">
+                    <h5>Help</h5>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
 

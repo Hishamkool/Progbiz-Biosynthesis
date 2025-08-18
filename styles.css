@@ -1,5 +1,6 @@
 * {
-    /* outline: 2px dotted grey; */
+    outline: 2px dotted grey;
+
 
 }
 
@@ -94,6 +95,7 @@ li {
 a {
 
     text-decoration: none;
+
 }
 
 header {
@@ -101,8 +103,7 @@ header {
 
 }
 
-nav {
-    width: 100%;
+.nav-header {
     display: flex;
     justify-content: space-between;
 }
@@ -130,6 +131,7 @@ nav {
     background-color: white;
     top: 20px;
     width: 40%;
+    gap: 20px;
     height: fit-content;
     cursor: pointer;
     padding: 0 10px;
@@ -137,11 +139,19 @@ nav {
 }
 
 #nav-items a {
-    display: block;
-    padding: 10px 0;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
     color: #3F7D58;
     font-family: var(--font-body-open_sans);
     font-weight: 600;
+}
+
+.login-signup {
+    display: none;
+
 }
 
 #nav-items a:hover {
@@ -156,10 +166,6 @@ nav {
 /* toggle button for handburger menu */
 #nav-items.active {
     display: flex;
-}
-
-.nav-links {
-    padding: 10px 0;
 }
 
 #nav-items div {
@@ -500,17 +506,21 @@ footer {
     background-color: var(--footer-color);
 }
 
+/* aligning navigation items to flex */
 footer .footer-navigations {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-
-    padding: 50px;
-    align-items: center;
-    justify-content: space-between;
+    padding: 20px;
+    align-items: start;
+    justify-content: space-evenly;
+    box-sizing: border-box;
     text-align: start;
+
 
 }
 
+/* aligning li items */
 footer .footer-navigations ul {
     padding-left: 0;
     padding-right: 20px;
@@ -580,6 +590,70 @@ footer figcaption p {
         --font-size-cta-16: 14px;
     }
 
+    /* 1. navbar */
+    .hamburger {
+        display: none;
+    }
+
+    /* Seperate login and signup buttons */
+    /* .login-signup {
+        display: inline;
+
+    } */
+
+    /* removing login and signup from the navbar list  */
+   /*  #nav-items .login,
+    #nav-items .signup {
+        display: none;
+    } */
+
+
+    .navbar {
+        align-items: start;
+        justify-content: center;
+        overflow-x: auto;
+    }
+
+    #nav-items {
+        position: static;
+        display: flex;
+
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: var(--secondary-colour);
+        border-radius: 24px;
+        padding: 0;
+        margin: 0;
+        width: fit-content;
+
+        gap: 16px;
+
+    }
+
+    #nav-items li a {
+        color: white;
+        padding: 5px 10px;
+
+    }
+
+    #nav-items li:nth-child(1) {
+        padding: 5px 10px;
+        border-radius: 24px;
+        border: 1px solid var(--secondary-colour);
+        margin: 0;
+        background-color: white;
+
+    }
+
+    #nav-items li:nth-child(1) a {
+        color: #121212;
+
+    }
+
+
+
 
     /* 7. Green growth hub section */
     .green-growth-cards {
@@ -610,15 +684,14 @@ footer figcaption p {
 
 
     /* 8. Contact section */
-    
     .contact {
         display: flex;
         flex-direction: row;
-        margin: 50px;  
-        border-radius: 50px;
+        margin: 20px;
+        border-radius: 20px;
+        overflow: hidden;
 
     }
-     
 
     /* changing back to default order */
     .contact-form {
@@ -633,10 +706,30 @@ footer figcaption p {
         object-fit: cover;
     }
 
+    /*  9. FOOTER */
+
+    footer .footer-section {
+        display: flex;
+
+    }
+
+    footer .footer-section .logo-description {
+        flex: 1;
+    }
+
+    footer .footer-section .footer-navigations {
+        flex: 9;
+
+    }
+
+
+
 
 
 
 }
+
+/* end tab styles */
 
 /*  tab styles */
 @media screen and (min-width:960px) {}
@@ -655,6 +748,59 @@ footer figcaption p {
     }
 
 
+    /* 1. navbar */
+    .hamburger {
+        display: none;
+    }
+
+    /* Seperate login and signup buttons */
+    .login-signup {
+        display: inline;
+
+    }
+
+    /* removing login and signup from the navbar list  */
+    #nav-items .login,
+    #nav-items .signup {
+        display: none;
+    }
+
+
+
+    #nav-items {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background-color: var(--secondary-colour);
+        border-radius: 24px;
+        padding: 0;
+        margin: 0;
+        width: max-content;
+        gap: 26px;
+
+    }
+
+    #nav-items li a {
+        color: white;
+        padding: 5px 10px;
+
+    }
+
+    #nav-items li:nth-child(1) {
+        padding: 5px 10px;
+        border-radius: 24px;
+        border: 1px solid var(--secondary-colour);
+        margin: 0;
+        background-color: white;
+
+    }
+
+    #nav-items li:nth-child(1) a {
+        color: #121212;
+
+    }
 
     .contact {
         flex-direction: row;
