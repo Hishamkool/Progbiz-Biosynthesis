@@ -1,5 +1,5 @@
 * {
-    outline: 2px dotted grey;
+    /* outline: 2px dotted grey; */
 
 
 }
@@ -102,20 +102,19 @@ header {
     padding: 20px 10px;
 
 }
-
+/* 1. navbar */
+/* complete header - image , navigations , login-signup */
 .nav-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
-
+/* items in the navigations */
 .navbar {
     display: flex;
     flex-direction: column;
     align-items: end;
-
-
-
 }
 
 .navbar button {
@@ -146,12 +145,30 @@ header {
     display: inline-block;
     color: #3F7D58;
     font-family: var(--font-body-open_sans);
+    font-size: var(--font-size-cta-16);
     font-weight: 600;
 }
 
 .login-signup {
-    display: none;
+    display: none; 
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+ 
+    
+}
 
+.login-signup .login,
+.login-signup .signup {
+    color: var(--font-colour-400);
+    font-family: var(--font-title-sansation);
+    font-size: var(--font-size-cta-16);
+}
+
+.login-signup .signup {
+    padding: 8px 10px;
+    border: 1px solid var(--font-colour-400);
+    border-radius: 24px;
 }
 
 #nav-items a:hover {
@@ -168,12 +185,7 @@ header {
     display: flex;
 }
 
-#nav-items div {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    gap: 10px;
-}
+
 
 .hamburger {
     width: 25px;
@@ -602,7 +614,7 @@ footer figcaption p {
     } */
 
     /* removing login and signup from the navbar list  */
-   /*  #nav-items .login,
+    /*  #nav-items .login,
     #nav-items .signup {
         display: none;
     } */
