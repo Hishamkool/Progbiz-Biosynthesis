@@ -102,6 +102,7 @@ header {
     padding: 20px 10px;
 
 }
+
 /* 1. navbar */
 /* complete header - image , navigations , login-signup */
 .nav-header {
@@ -150,12 +151,12 @@ header {
 }
 
 .login-signup {
-    display: none; 
+    display: none;
     justify-content: center;
     text-align: center;
     align-items: center;
- 
-    
+
+
 }
 
 .login-signup .login,
@@ -205,7 +206,7 @@ header {
 
 .round {
     background-color: #EEEEEE;
-    width: 221px;
+    width: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -224,6 +225,10 @@ header {
     width: 13px;
     height: 13px;
 
+}
+
+.round p {
+    font-size: var(--font-size-cta-16);
 }
 
 
@@ -734,12 +739,54 @@ footer figcaption p {
 
     }
 
+    /* HERO */
+    .hero-image-about {
+        padding: 0 30px;
+        flex-direction: row;
+        text-align: start;
+        padding-bottom: 20px;
+        display: flex;
+        flex-basis: 50%;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
 
+    .hero-image-about .about-year,
+    .hero-image-about .about-text {
+        flex-basis: 50%;
+        flex-grow: 1;
+        flex-shrink: 1;
+    }
+}
 
+/* briging back default padding for figure */
+figure {
+    padding: revert;
+    margin: revert;
+}
 
+/* 5. Get Started Section */
+.get-started .slides figure img {
 
+    height: 350px;
+    min-width: 200px;
+    max-width: 200px;
 
 }
+
+/* 7. Green growth hub section */
+.green-growth .top {
+    padding: 16px 25px;
+}
+
+.green-growth .top .title {
+    padding: 0;
+    padding-bottom: 20px;
+
+}
+
+
+
 
 /* end tab styles */
 
@@ -759,6 +806,11 @@ footer figcaption p {
         --font-size-cta-16: 16px;
     }
 
+    /* chaging horizontal padding when in desktop view */
+    header {
+        padding: 20px 30px;
+
+    }
 
     /* 1. navbar */
     .hamburger {
@@ -766,10 +818,13 @@ footer figcaption p {
     }
 
     /* Seperate login and signup buttons */
-    .login-signup {
-        display: inline;
 
+    .login-signup {
+        display: flex;
+        gap: 24px;
     }
+
+
 
     /* removing login and signup from the navbar list  */
     #nav-items .login,
@@ -826,4 +881,76 @@ footer figcaption p {
     .form-image {
         order: 2;
     }
+
+    /* 5. Get Started Section */
+    .get-started .slides figure img {
+
+        height: 480px;
+        min-width: 380px;
+
+    }
+
+    /* 7. Green Growth */
+    .green-growth .top {
+        padding: 80px;
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .green-growth .top>* {
+        flex: 1 1 50%;
+    }
+
+    .green-growth-cards {
+        box-sizing: border-box;
+        padding: 0 80px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        text-align: left;
+        gap: 20px;
+        text-align: center;   
+    }
+    
+    .green-growth-cards>* {
+        align-self: self-start;
+        justify-self: center;
+        text-align: start;
+    }
+    
+    .green-growth-cards figure {
+        padding: 0;
+        margin: 0;
+        
+        min-width: 345px;
+        
+        
+    }
+    
+    .green-growth-cards figure img {
+       
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+         
+    }
+
+     
+
+    .green-growth-cards> :nth-child(1) {
+        order: 1;
+
+    }
+
+    .green-growth-cards> :nth-child(2) {
+        grid-column: span 1;
+
+        order: 1;
+    }
+
+    .green-growth-cards> :nth-child(3) {
+        order: 3;
+    }
+
+
 }
