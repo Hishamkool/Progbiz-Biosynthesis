@@ -455,6 +455,10 @@ figure {
     padding: 20px;
     background-color: var(--grey-colour-200);
 }
+.contact .contact-form .name-row .name-field{
+    display: flex;
+    flex-direction: column;
+}
 
 /* heading style */
 .contact .contact-form h2 {
@@ -909,33 +913,33 @@ figure {
         grid-template-columns: repeat(3, 1fr);
         text-align: left;
         gap: 20px;
-        text-align: center;   
+        text-align: center;
     }
-    
+
     .green-growth-cards>* {
         align-self: self-start;
         justify-self: center;
         text-align: start;
     }
-    
+
     .green-growth-cards figure {
         padding: 0;
         margin: 0;
-        
+
         min-width: 345px;
-        
-        
+
+
     }
-    
+
     .green-growth-cards figure img {
-       
+
         width: 100%;
         height: auto;
         object-fit: cover;
-         
+
     }
 
-     
+
 
     .green-growth-cards> :nth-child(1) {
         order: 1;
@@ -952,5 +956,18 @@ figure {
         order: 3;
     }
 
+    /* Contact section  */
+    /* First & Last Name side by side in desktop */
+    .contact-form .name-row {
+        display: flex;
+        gap: 20px;
+        /* spacing between inputs */
+    }
+
+    .contact-form .name-row .name-field {
+        flex: 1; 
+        display: flex;
+        flex-direction: column;
+    }
 
 }
