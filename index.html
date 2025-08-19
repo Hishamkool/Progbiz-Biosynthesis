@@ -100,10 +100,13 @@
     <section class="get-started">
         <!-- Carousel Navigation Arrows -->
         <div class="slide-navigations">
-            <a href="#" class="left" title="previous">
+            <button href="#" class="left" title="previous">
                 <img src="assets/images/svg/navigator.svg" alt="left arrow">
-                <img src="assets/images/svg/navigator-right.svg" alt="right arrow">
-            </a>
+
+            </button>
+            <button class="right">
+                <img src="assets/images/svg/navigator-right.svg" alt="right">
+            </button>
 
         </div>
         <!-- Feature cards (Organic Farm, Organic Fertilizer, Technology Irrigation, Agricultural Monitoring) -->
@@ -160,7 +163,7 @@
         <img class="banner-image" src="assets/images/jpg/img-banner-two.jpg" alt="banner image">
         <div class="banner-content">
             <h2 class="banner-text">Transform Your Farm. Empower Your Future.</h2>
-            <a href="#"><img class="arrow" src="assets/images/svg/right arow top small.svg" alt=""></a>
+            <button href="#"><img class="arrow" src="assets/images/svg/right arow top small.svg" alt=""></button>
         </div>
     </section>
 
@@ -232,12 +235,15 @@
                     <input type="text" id="last-name" name="last-name" placeholder="Your last name">
                 </div>
             </div>
-            
+
             <label class="label-style-p" for="email">Email</label>
             <input type="email" name="email" id="email" placeholder="example@gmail.com">
             <label class="label-style-p" for="message">Message</label>
             <input type="text" name="message" id="message">
-            <button type="submit" id="submit"><img src="assets/images/svg/send black.svg" alt="send button"></button>
+            <button type="submit" id="submit" class="submit">
+                <!-- <img src="assets/images/svg/send black.svg" alt="send button"> -->
+                Send
+            </button>
         </form>
         <!-- Right or below: Contact Image (forest scene) -->
         <img src="assets/images/jpg/contact-img.jpg" alt="enchanted forest waterfall" class="form-image">

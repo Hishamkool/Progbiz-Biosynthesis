@@ -174,6 +174,7 @@ header {
     padding: 8px 10px;
     border: 1px solid var(--font-colour-400);
     border-radius: 24px;
+    transition: ease 0.5s;
 }
 
 .login-signup .signup:hover {
@@ -269,18 +270,17 @@ header {
     border-radius: 20px;
     padding: 16px 20px;
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: var(--font-size-cta-16);
     background-color: var(--secondary-colour);
     color: white;
     min-width: 147px;
     min-height: 52px;
     border: none;
+    transition: background-color ease 1s;
 }
 
 .hero .get-started-btn:hover {
     background-color: var(--primary-colour);
-
-
 }
 
 .get-started-btn img {
@@ -325,10 +325,34 @@ header {
     z-index: 1;
 }
 
+/* adding button styles */
+.get-started .slide-navigations>* {
+    border: none;
+    background: none;
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+
+
+}
+
 /* navigations arrow size */
 .slide-navigations img {
     width: 30px;
+    padding: 5px;
     height: 30px;
+}
+
+.slide-navigations img:hover {
+    transform: scale(1.50);
+
+    transition: ease 1s;
+}
+
+.slide-navigations img:not(:hover) {
+    transform: scale(1.0);
+    transition: ease 1s;
 }
 
 /* image captions */
@@ -351,6 +375,38 @@ header {
     font-family: var(--font-title-sansation);
 }
 
+.second-slide .get-started-heading img:hover {
+    /* animation: rotateImage 1s ease both; */
+    transform: rotate(35deg) scale(1.4);
+    transition: transform 0.5s ease;
+
+}
+
+.second-slide .get-started-heading img:not(:hover) {
+    transform: scale(1.0);
+    transition: transform 0.5s ease;
+    /*  animation: rotateImage 1s ease reverse both; */
+}
+
+/*  .second-slide .get-started-heading img:not(:hover) {
+  animation: rotateImage 1s ease reverse forwards;
+} */
+
+/* @keyframes rotateImage {
+    0% {
+        transform: rotate(0deg) scale(1.0);
+    }
+    50%{
+        transform: rotate(17deg) scale(1.5); ;
+    }
+
+    100% {
+        transform: rotate(35deg) scale(2.0);
+    }
+
+ */
+}
+
 /* arrow size */
 .second-slide .get-started-heading .navigation {
 
@@ -366,9 +422,14 @@ header {
     position: relative;
     display: flex;
     overflow-x: auto;
+    scroll-behavior: smooth;
     margin-left: -60px;
     overflow-y: hidden;
     flex-direction: row;
+}
+
+.slides::-webkit-scrollbar {
+    display: none;
 }
 
 figure {
@@ -427,6 +488,19 @@ figure {
     position: absolute;
     right: 30px;
     bottom: 20px;
+}
+
+/* arrow roate on hover */
+.banner img.arrow:hover {
+    transform: rotate(35deg) scale(2.0);
+    transition: transform 0.5s ease;
+}
+
+.banner img.arrow:not(:hover) {
+    transform:
+        /* rotate(0deg) */
+        scale(1.0);
+    transition: transform 0.5s ease;
 }
 
 /* 7. Green growth hub section */
@@ -517,13 +591,24 @@ figure {
 }
 
 /* prevent overflow of submit button-image */
-.contact-form #submit img {
-    width: 100%;
-}
+/* .contact-form #submit img {
+    width: 100%;  /* removed image */
+
 
 .contact-form #submit {
     border: none;
+    border-radius: 20px;
+    padding: 16px 20px;
+    background-color: var(--secondary-colour);
+    color: white;
+    font-size: var(--font-size-cta-16);
+    font-family: var(--font-title-sansation);
+    transition: ease 0.5s;
+}
 
+.contact-form #submit:hover {
+    background-color: var(--primary-colour);
+    border: none;
 }
 
 
@@ -657,7 +742,9 @@ footer figcaption p {
         width: fit-content;
         box-shadow: none;
 
+
     }
+
 
     #nav-items li a {
         width: revert;
@@ -674,11 +761,17 @@ footer figcaption p {
 
     }
 
+    #nav-items li {
+        /* transition: background-color 0.2s ease,
+                    color 0.2s ease,
+                    border 0s ease; */
+    }
+
+    /* adding white background while hovering */
     #nav-items li:hover {
         /*  padding: 5px 10px; */
-        border-radius: 24px;
-        border: 1px solid var(--secondary-colour);
-        margin: 0;
+        border: 0.2px solid var(--secondary-colour);
+        border-radius: 24px; 
         background-color: white;
 
     }
@@ -743,23 +836,9 @@ footer figcaption p {
         object-fit: cover;
     }
 
-    /*  9. FOOTER */
 
-    footer .footer-section {
-        display: flex;
 
-    }
-
-    footer .footer-section .logo-description {
-        flex: 1;
-    }
-
-    footer .footer-section .footer-navigations {
-        flex: 9;
-
-    }
-
-    /* HERO */
+    /* 4. ABOUT SECTION*/
     .hero-image-about {
         padding: 40px 5.56%;
         flex-direction: row;
@@ -793,7 +872,7 @@ footer figcaption p {
 
     }
 
-    /* 7. Green growth hub section */
+    /* 7. GREEN GROWTH HUB SECTION  */
     .green-growth .top {
         padding: 16px 25px;
     }
@@ -801,6 +880,22 @@ footer figcaption p {
     .green-growth .top .title {
         padding: 0;
         padding-bottom: 20px;
+
+    }
+
+
+    /* 9. FOOTER */
+    footer .footer-section {
+        display: flex;
+
+    }
+
+    footer .footer-section .logo-description {
+        flex: 1;
+    }
+
+    footer .footer-section .footer-navigations {
+        flex: 9;
 
     }
 }
@@ -813,7 +908,17 @@ footer figcaption p {
 /* end tab styles */
 
 /*  tab styles */
-@media screen and (min-width:960px) {}
+@media screen and (min-width:960px) {
+    /* 1. HEADER / NAVBAR */
+    /*  2. HERO SECTION/ heading */
+    /* 3. HERO IMAGE  */
+    /* 4. ABOUT SECTION */
+    /* 5. FEATURE CAROUSEL */
+    /* 6. SECOND HERO / BANNER */
+    /* 7. GREEN GROWTH HUB SECTION  */
+    /* 8. CONTACT SECTION  */
+    /* 9. FOOTER */
+}
 
 /* desktop tab styles */
 @media screen and (min-width:1200px) {
@@ -856,26 +961,20 @@ footer figcaption p {
 
 
 
-    .contact {
-        margin: 20px 15%;
-        /* side-by-side */
-    }
 
-    .contact-form {
-        order: 1;
-    }
 
-    .form-image {
-        order: 2;
-    }
 
-    /* 5. Get Started Section */
+    /* 5. FEATURE CAROUSEL / GET STARTED SECTION */
     .get-started .slides figure img {
 
         height: 480px;
         min-width: 380px;
 
     }
+
+
+
+
 
     /* 6.SECOND HERO / BANNER */
     .banner .banner-image {
@@ -944,7 +1043,20 @@ footer figcaption p {
         order: 3;
     }
 
-    /* Contact section  */
+    /* 8. CONTACT SECTION */
+    .contact {
+       margin: 40px 15%;
+        /* side-by-side */
+    }
+
+    .contact-form {
+        order: 1;
+    }
+
+    .form-image {
+        order: 2;
+    }
+
     /* First & Last Name side by side in desktop */
     .contact-form .name-row {
         display: flex;
@@ -959,3 +1071,14 @@ footer figcaption p {
     }
 
 }
+
+/* animations */
+/* @keyframes buttonTransition {
+    from {
+        background-color: var(--secondary-colour);
+    }
+
+    to {
+        background-color: var(--primary-colour);
+    }
+} */
