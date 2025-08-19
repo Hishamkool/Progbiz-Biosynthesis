@@ -129,17 +129,20 @@ header {
     flex-direction: column;
     position: absolute;
     background-color: white;
-    top: 20px;
+    top: 50px;
     width: 40%;
-    gap: 20px;
     height: fit-content;
+
     cursor: pointer;
-    padding: 0 10px;
-    margin: 10px;
+    box-shadow: -5px 5px 6px rgba(0, 0, 0, 0.1);
+    /* gap: 20px; */
+    margin: 0;
+    padding: 0;
+
 }
 
 #nav-items a {
-    display: inline-block;
+    padding: 10px 10px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -148,6 +151,7 @@ header {
     font-family: var(--font-body-open_sans);
     font-size: var(--font-size-cta-16);
     font-weight: 600;
+    width: 100%;
 }
 
 .login-signup {
@@ -170,6 +174,12 @@ header {
     padding: 8px 10px;
     border: 1px solid var(--font-colour-400);
     border-radius: 24px;
+}
+
+.login-signup .signup:hover {
+    background-color: var(--primary-colour);
+    border: 1px solid white;
+    color: white;
 }
 
 #nav-items a:hover {
@@ -264,6 +274,13 @@ header {
     color: white;
     min-width: 147px;
     min-height: 52px;
+    border: none;
+}
+
+.hero .get-started-btn:hover {
+    background-color: var(--primary-colour);
+
+
 }
 
 .get-started-btn img {
@@ -276,6 +293,7 @@ header {
     width: 100%;
     height: auto;
     object-fit: cover;
+    max-height: 542px;
 }
 
 .hero-image-about {
@@ -401,13 +419,14 @@ figure {
     position: absolute;
     top: 15%;
     left: 5%;
+    max-width: 545px;
 }
 
 /* arrow position */
 .banner img.arrow {
     position: absolute;
     right: 30px;
-    bottom: 5px;
+    bottom: 20px;
 }
 
 /* 7. Green growth hub section */
@@ -455,7 +474,8 @@ figure {
     padding: 20px;
     background-color: var(--grey-colour-200);
 }
-.contact .contact-form .name-row .name-field{
+
+.contact .contact-form .name-row .name-field {
     display: flex;
     flex-direction: column;
 }
@@ -511,7 +531,7 @@ figure {
 .contact {
     display: flex;
     flex-direction: column;
-    /* default: image first, form second */
+
 }
 
 .contact-form {
@@ -616,18 +636,6 @@ footer figcaption p {
         display: none;
     }
 
-    /* Seperate login and signup buttons */
-    /* .login-signup {
-        display: inline;
-
-    } */
-
-    /* removing login and signup from the navbar list  */
-    /*  #nav-items .login,
-    #nav-items .signup {
-        display: none;
-    } */
-
 
     .navbar {
         align-items: start;
@@ -638,7 +646,6 @@ footer figcaption p {
     #nav-items {
         position: static;
         display: flex;
-
         flex-direction: row;
         align-items: center;
         justify-content: center;
@@ -648,19 +655,27 @@ footer figcaption p {
         padding: 0;
         margin: 0;
         width: fit-content;
-
-        gap: 16px;
+        box-shadow: none;
 
     }
 
     #nav-items li a {
+        width: revert;
         color: white;
         padding: 5px 10px;
 
+
+
     }
 
-    #nav-items li:nth-child(1) {
-        padding: 5px 10px;
+    /* remove already set background color */
+    #nav-items a:hover {
+        background-color: revert;
+
+    }
+
+    #nav-items li:hover {
+        /*  padding: 5px 10px; */
         border-radius: 24px;
         border: 1px solid var(--secondary-colour);
         margin: 0;
@@ -668,7 +683,7 @@ footer figcaption p {
 
     }
 
-    #nav-items li:nth-child(1) a {
+    #nav-items li:hover a {
         color: #121212;
 
     }
@@ -708,7 +723,8 @@ footer figcaption p {
     .contact {
         display: flex;
         flex-direction: row;
-        margin: 20px;
+        /* margin: 20px; */
+        margin: 20px 10%;
         border-radius: 20px;
         overflow: hidden;
 
@@ -745,10 +761,10 @@ footer figcaption p {
 
     /* HERO */
     .hero-image-about {
-        padding: 0 30px;
+        padding: 40px 5.56%;
         flex-direction: row;
         text-align: start;
-        padding-bottom: 20px;
+        /*  padding-bottom: 30px; */
         display: flex;
         flex-basis: 50%;
         flex-grow: 1;
@@ -761,33 +777,35 @@ footer figcaption p {
         flex-grow: 1;
         flex-shrink: 1;
     }
+
+    /* briging back default padding for figure */
+    figure {
+        padding: revert;
+        margin: revert;
+    }
+
+    /* 5. Get Started Section */
+    .get-started .slides figure img {
+
+        height: 350px;
+        min-width: 200px;
+        max-width: 200px;
+
+    }
+
+    /* 7. Green growth hub section */
+    .green-growth .top {
+        padding: 16px 25px;
+    }
+
+    .green-growth .top .title {
+        padding: 0;
+        padding-bottom: 20px;
+
+    }
 }
 
-/* briging back default padding for figure */
-figure {
-    padding: revert;
-    margin: revert;
-}
 
-/* 5. Get Started Section */
-.get-started .slides figure img {
-
-    height: 350px;
-    min-width: 200px;
-    max-width: 200px;
-
-}
-
-/* 7. Green growth hub section */
-.green-growth .top {
-    padding: 16px 25px;
-}
-
-.green-growth .top .title {
-    padding: 0;
-    padding-bottom: 20px;
-
-}
 
 
 
@@ -838,43 +856,8 @@ figure {
 
 
 
-    #nav-items {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background-color: var(--secondary-colour);
-        border-radius: 24px;
-        padding: 0;
-        margin: 0;
-        width: max-content;
-        gap: 26px;
-
-    }
-
-    #nav-items li a {
-        color: white;
-        padding: 5px 10px;
-
-    }
-
-    #nav-items li:nth-child(1) {
-        padding: 5px 10px;
-        border-radius: 24px;
-        border: 1px solid var(--secondary-colour);
-        margin: 0;
-        background-color: white;
-
-    }
-
-    #nav-items li:nth-child(1) a {
-        color: #121212;
-
-    }
-
     .contact {
-        flex-direction: row;
+        margin: 20px 15%;
         /* side-by-side */
     }
 
@@ -894,9 +877,14 @@ figure {
 
     }
 
+    /* 6.SECOND HERO / BANNER */
+    .banner .banner-image {
+        height: auto;
+    }
+
     /* 7. Green Growth */
     .green-growth .top {
-        padding: 80px;
+        padding: 40px 5.56%;
         display: flex;
         flex-direction: row;
 
@@ -965,7 +953,7 @@ figure {
     }
 
     .contact-form .name-row .name-field {
-        flex: 1; 
+        flex: 1;
         display: flex;
         flex-direction: column;
     }
